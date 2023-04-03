@@ -1,0 +1,30 @@
+<div class="ourForm">
+  <h2 id="myLogin">Login</h2>
+  <form  >
+    <div class="myInputForm">
+      <input class="myInput" type="email" placeholder="Email" name="email" formControlName="userEmail"/>
+    </div>
+    <!--<div *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched" class="unvalidInfo">
+      Enter email correctly
+    </div>-->
+    <div class="myInputForm">
+      <input class="myInput" type="password" placeholder="Password" name="password" formControlName="userPassword"/>
+    </div>
+   <!-- <div *ngIf="myForm.controls['userPassword'].invalid && myForm.controls['userPassword'].touched" class="unvalidInfo">
+      Enter password correctly
+    </div>-->
+    <div id="forgottenPassword">
+      <a href="http://risovach.ru/upload/2011/10/comics_Uchilka_orig_1319576083.jpg"
+         routerLinkActive="activeLink"
+         [routerLinkActiveOptions]="{exact:true}">Forgot Password?</a>
+    </div>
+  </form>
+  <div class="containerForBTN">
+    <div class="center">
+      <a [routerLink]="['converter']" id="hrefNext">
+        <button id="loginButton" >Login</button>
+      </a>
+    </div>
+  </div>
+</div>
+
