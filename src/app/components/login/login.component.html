@@ -1,18 +1,18 @@
 <div class="ourForm">
   <h2 id="myLogin">Login</h2>
-  <form  >
+  <form [formGroup]="loginForm">
     <div class="myInputForm">
-      <input class="myInput" type="email" placeholder="Email" name="email" formControlName="userEmail"/>
+      <input class="myInput" type="email" placeholder="Email" name="email" formControlName="email"/>
     </div>
-    <!--<div *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched" class="unvalidInfo">
+    <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" class="invalidInfo">
       Enter email correctly
-    </div>-->
-    <div class="myInputForm">
-      <input class="myInput" type="password" placeholder="Password" name="password" formControlName="userPassword"/>
     </div>
-   <!-- <div *ngIf="myForm.controls['userPassword'].invalid && myForm.controls['userPassword'].touched" class="unvalidInfo">
+    <div class="myInputForm">
+      <input class="myInput" type="password" placeholder="Password" name="password" formControlName="password"/>
+    </div>
+   <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" class="invalidInfo">
       Enter password correctly
-    </div>-->
+    </div>
     <div id="forgottenPassword">
       <a href="http://risovach.ru/upload/2011/10/comics_Uchilka_orig_1319576083.jpg"
          routerLinkActive="activeLink"
@@ -21,8 +21,8 @@
   </form>
   <div class="containerForBTN">
     <div class="center">
-      <a [routerLink]="['converter']" id="hrefNext">
-        <button id="loginButton" >Login</button>
+      <a [routerLink]="['']" id="hrefNext">
+        <button id="loginButton" (click)="login()">Login</button>
       </a>
     </div>
   </div>
