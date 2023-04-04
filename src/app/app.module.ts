@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import {LoginComponent} from "./components/login/login.component";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { MainComponent } from './components/main/main.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MainComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,27 +1,27 @@
-<div class="ourForm">
+<div class="container">
   <h2 id="myLogin">Login</h2>
-  <form [formGroup]="loginForm">
-    <div class="myInputForm">
-      <input class="myInput" type="email" placeholder="Email" name="email" formControlName="email"/>
+  <form [formGroup]="loginForm" class="one">
+    <div >
+      <input  type="email" placeholder="Email" name="email" formControlName="email"/>
     </div>
-    <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" class="invalidInfo">
+    <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" >
       Enter email correctly
     </div>
-    <div class="myInputForm">
-      <input class="myInput" type="password" placeholder="Password" name="password" formControlName="password"/>
+    <div >
+      <input type="password" placeholder="Password" name="password" formControlName="password"/>
     </div>
-   <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" class="invalidInfo">
+   <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" >
       Enter password correctly
     </div>
     <div id="forgottenPassword">
-      <a href="http://risovach.ru/upload/2011/10/comics_Uchilka_orig_1319576083.jpg"
+      <a href="https://risovach.ru/upload/2011/10/comics_Uchilka_orig_1319576083.jpg"
          routerLinkActive="activeLink"
          [routerLinkActiveOptions]="{exact:true}">Forgot Password?</a>
     </div>
   </form>
-  <div class="containerForBTN">
-    <div class="center">
-      <a [routerLink]="['']" id="hrefNext">
+  <div>
+    <div>
+      <a [routerLink]="['main']" id="hrefNext">
         <button id="loginButton" (click)="login()">Login</button>
       </a>
     </div>
