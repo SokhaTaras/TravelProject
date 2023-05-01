@@ -1,0 +1,42 @@
+.container{
+  width: 100%;
+  margin-top: 5%;
+  position: sticky;
+  top: 30px;
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 20px;
+
+}
+
+.page-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  .container-img{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: space-between;
+    .telegram-img{
+      max-width: 35px;
+      max-height: 35px;
+    }
+    .instagram-img{
+      max-width: 35px;
+      max-height: 35px;
+    }
+    .gmail-img{
+      max-width: 35px;
+      min-height: 40px;
+    }
+
+  }
+
+}
+

@@ -8,6 +8,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TitleComponent } from './components/title/title.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeaderComponent } from './components/header/header.component';
     LoginComponent,
     NotFoundComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
