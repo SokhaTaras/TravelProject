@@ -4,17 +4,17 @@
   position: sticky;
   top: 30px;
   background-color: white;
-  opacity: 0;
+  opacity: 0.75;
   border-radius: 20px;
-  transition: all 2s ease-in-out;
+
 }
-.container.scroll {
-  opacity: 1;
-}
+
 .page-header{
   display: flex;
   justify-content: center;
   align-items: center;
+
+
 
 
   .container-img{
