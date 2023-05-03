@@ -1,14 +1,14 @@
 <div class="container">
-  <h2 id="myLogin">Login</h2>
+  <h2 class="header" id="myLogin">Login</h2>
   <form [formGroup]="loginForm" class="one">
     <div >
-      <input  type="email" placeholder="Email" name="email" formControlName="email"/>
+      <input class="login input__email" type="email" placeholder="Email" name="email" formControlName="email"/>
     </div>
-    <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" >
+    <div  *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" >
       Enter email correctly
     </div>
     <div >
-      <input type="password" placeholder="Password" name="password" formControlName="password"/>
+      <input class="login input__password" type="password" placeholder="Password" name="password" formControlName="password"/>
     </div>
    <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched" >
       Enter password correctly
@@ -22,7 +22,7 @@
   <div>
     <div>
       <a [routerLink]="['main']" id="hrefNext">
-        <button id="loginButton" (click)="login()">Login</button>
+        <button class="input__button" id="loginButton" (click)="login()">Login</button>
       </a>
     </div>
   </div>
