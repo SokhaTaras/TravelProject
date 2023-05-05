@@ -12,6 +12,7 @@ import { TitleComponent } from './components/title/title.component';
 import { ToursPageComponent } from './components/tours-page/tours-page.component';
 import { TourCardComponent } from './components/tour-card/tour-card.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
