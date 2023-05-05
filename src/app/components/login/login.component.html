@@ -3,70 +3,159 @@
   <h2 class="header" id="myRegistration" *ngIf="!isLogging">Registration</h2>
   <form [formGroup]="loginForm" class="one" *ngIf="isLogging">
     <div>
-      <input class="login input__email" type="email" placeholder="Email" name="email" formControlName="email"/>
+      <input
+        class="login input__email"
+        type="email"
+        placeholder="Email"
+        name="email"
+        formControlName="email"
+      />
     </div>
-    <div  *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" >
+    <div
+      *ngIf="
+        loginForm.controls['email'].invalid &&
+        loginForm.controls['email'].touched
+      "
+    >
       Enter email correctly
     </div>
     <div>
-      <input class="login input__password" type="password" placeholder="Password" name="password" formControlName="password"/>
+      <input
+        class="login input__password"
+        type="password"
+        placeholder="Password"
+        name="password"
+        formControlName="password"
+      />
     </div>
-   <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" >
+    <div
+      *ngIf="
+        loginForm.controls['password'].invalid &&
+        loginForm.controls['password'].touched
+      "
+    >
       Enter password correctly
     </div>
     <div id="forgottenPassword">
-      <a href="https://risovach.ru/upload/2011/10/comics_Uchilka_orig_1319576083.jpg"
-         routerLinkActive="activeLink"
-         [routerLinkActiveOptions]="{exact:true}">Forgot Password?</a>
+      <a
+        href="https://risovach.ru/upload/2011/10/comics_Uchilka_orig_1319576083.jpg"
+        routerLinkActive="activeLink"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Forgot Password?</a
+      >
     </div>
-    <div *ngIf="isLogging">
-      <a>
-        <button (click)="loggingToggler()">Create new account</button>
-      </a>
-    </div>
+    <!--<div *ngIf="isLogging">
+      <div >
+        <div>
+          <a [routerLink]="['main']" id="hrefNext">
+            <button class="input__button" id="loginButton" (click)="login()">
+              Login
+            </button>
+          </a>
+        </div>
+        <div >
+          <a>
+            <button class="input__button" (click)="loggingToggler()">
+              Create new account
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>-->
   </form>
   <form [formGroup]="registrationForm" *ngIf="!isLogging">
-    <p>Enter name</p>
+    <p class="name__registration__form">Enter name</p>
     <div>
-      <input class="login input__email" type="text" placeholder="Enter name" name="userName" formControlName="userName"/>
+      <input
+        class="login input__email"
+        type="text"
+        placeholder="Enter name"
+        name="userName"
+        formControlName="userName"
+      />
     </div>
-    <p>Enter surname</p>
+    <p class="name__registration__form">Enter surname</p>
     <div>
-      <input class="login input__email" type="text" placeholder="Enter surname" name="userSurname" formControlName="userSurname"/>
+      <input
+        class="login input__email"
+        type="text"
+        placeholder="Enter surname"
+        name="userSurname"
+        formControlName="userSurname"
+      />
     </div>
-    <p>Enter email</p>
+    <p class="name__registration__form">Enter email</p>
     <div>
-      <input class="login input__email" type="email" placeholder="Enter email" name="email" formControlName="email" />
+      <input
+        class="login input__email"
+        type="email"
+        placeholder="Enter email"
+        name="email"
+        formControlName="email"
+      />
     </div>
-    <div  *ngIf="registrationForm.controls['email'].invalid && registrationForm.controls['email'].touched" >
-      Enter email correctly
+    <div
+      *ngIf="
+        registrationForm.controls['email'].invalid &&
+        registrationForm.controls['email'].touched
+      "
+    >
+      <p class="name__registration__form">Enter email correctly</p>
     </div>
-    <p>Enter password</p>
+    <p class="name__registration__form">Enter password</p>
     <div>
-      <input class="login input__password" type="password" placeholder="Password" name="password" formControlName="password"/>
+      <input
+        class="login input__password"
+        type="password"
+        placeholder="Password"
+        name="password"
+        formControlName="password"
+      />
     </div>
-    <div *ngIf="registrationForm.controls['password'].invalid && registrationForm.controls['password'].touched" >
-      Enter password correctly
+    <div
+      *ngIf="
+        registrationForm.controls['password'].invalid &&
+        registrationForm.controls['password'].touched
+      "
+    >
+      <p class="name__registration__form">Enter password correctly</p>
     </div>
-    <div *ngIf="!isLogging">
+    <!--<div *ngIf="!isLogging">
       <a>
-        <button (click)="loggingToggler()">Login</button>
+        <button class="input__button" (click)="loggingToggler()">Login</button>
       </a>
-    </div>
+    </div>-->
   </form>
-  <div *ngIf="isLogging">
-    <div>
-      <a [routerLink]="['main']" id="hrefNext">
-        <button class="input__button" id="loginButton" (click)="login()">Login</button>
-      </a>
-    </div>
+
+  <div class="input__button__div" *ngIf="!isLogging">
+    <a>
+      <button
+        class="input__button"
+        (click)="loggingToggler()"
+        id="loginButton"
+        (click)="login()"
+      >
+        Login
+      </button>
+    </a>
   </div>
-  <div *ngIf="!isLogging">
-    <div>
-      <a [routerLink]="['main']" >
-        <button class="input__button" (click)="register()">Sign Up</button>
-      </a>
-    </div>
+  <div class="input__button__div" *ngIf="!isLogging">
+    <a [routerLink]="['main']">
+      <button class="input__button" (click)="register()">Sign Up</button>
+    </a>
+  </div>
+  <div class="input__button__div" *ngIf="isLogging">
+    <a [routerLink]="['main']" id="hrefNext">
+      <button class="input__button" id="loginButton" (click)="login()">
+        Login
+      </button>
+    </a>
+  </div>
+  <div class="input__button__div" *ngIf="isLogging">
+    <a>
+      <button class="input__button" (click)="loggingToggler()">
+        Create new account
+      </button>
+    </a>
   </div>
 </div>
-
