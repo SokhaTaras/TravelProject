@@ -9,6 +9,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TitleComponent } from './components/title/title.component';
+import { ToursPageComponent } from './components/tours-page/tours-page.component';
+import { TourCardComponent } from './components/tour-card/tour-card.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -18,12 +21,15 @@ import { TitleComponent } from './components/title/title.component';
     NotFoundComponent,
     MainComponent,
     HeaderComponent,
-    TitleComponent
+    TitleComponent,
+    ToursPageComponent,
+    TourCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
