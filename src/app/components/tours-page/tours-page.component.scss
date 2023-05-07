@@ -1,11 +1,25 @@
 .container{
   border: 1px solid red;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .tour-list{
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.tour-list-item{
-
+.tour-list-item {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+  width: calc(25% - 20px);
 }
+
+app-tour-card{
+  flex-grow: 1;
+  text-align: center;
+  height: 300px;
+}
+
