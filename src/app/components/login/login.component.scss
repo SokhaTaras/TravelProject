@@ -11,7 +11,22 @@
     margin-bottom: 18px;
     font: small-caps bold 35px/1 sans-serif;
   }
-
+  .warning{
+    padding-left: 10px;
+    margin-bottom: 0px;
+    $animation-duration: 0.75s;
+    transition: opacity 0.75s ease-in-out;
+    animation: fade-in $animation-duration ease-in-out; //прозорість
+    color: rgb(255, 0, 0);
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   .login{
     width: 100%;
     padding: 12px 20px 12px 15px;
@@ -32,6 +47,7 @@
     align-items: center;
   }
   .name__registration__form{
+    padding-left: 13px;
     margin: 0%;
     text-indent: 5px;
   }
@@ -51,5 +67,4 @@
   .input__button:hover{
     scale: 110%;
   }
-
 }
