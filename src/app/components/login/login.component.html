@@ -44,24 +44,7 @@
         >Forgot Password?</a
       >
     </div>
-    <!--<div *ngIf="isLogging">
-      <div >
-        <div>
-          <a [routerLink]="['main']" id="hrefNext">
-            <button class="input__button" id="loginButton" (click)="login()">
-              Login
-            </button>
-          </a>
-        </div>
-        <div >
-          <a>
-            <button class="input__button" (click)="loggingToggler()">
-              Create new account
-            </button>
-          </a>
-        </div>
-      </div>
-    </div>-->
+
   </form>
   <form [formGroup]="registrationForm" *ngIf="!isLogging">
     <p class="name__registration__form">Enter name</p>
@@ -120,11 +103,7 @@
     >
       <p class="name__registration__form warning">*Enter password correctly</p>
     </div>
-    <!--<div *ngIf="!isLogging">
-      <a>
-        <button class="input__button" (click)="loggingToggler()">Login</button>
-      </a>
-    </div>-->
+
   </form>
 
   <div class="input__button__div" *ngIf="!isLogging">
