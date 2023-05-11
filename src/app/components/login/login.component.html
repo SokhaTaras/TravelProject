@@ -17,7 +17,7 @@
         loginForm.controls['email'].touched
       "
     >
-      Enter email correctly
+      <p class="warning">*Enter email correctly</p>
     </div>
     <div>
       <input
@@ -34,7 +34,7 @@
         loginForm.controls['password'].touched
       "
     >
-      Enter password correctly
+      <p class="warning">*Enter password correctly</p>
     </div>
     <div id="forgottenPassword">
       <a
@@ -100,7 +100,7 @@
         registrationForm.controls['email'].touched
       "
     >
-      <p class="name__registration__form">Enter email correctly</p>
+      <p class="name__registration__form warning ">*Enter email correctly</p>
     </div>
     <p class="name__registration__form">Enter password</p>
     <div>
@@ -118,7 +118,7 @@
         registrationForm.controls['password'].touched
       "
     >
-      <p class="name__registration__form">Enter password correctly</p>
+      <p class="name__registration__form warning">*Enter password correctly</p>
     </div>
     <!--<div *ngIf="!isLogging">
       <a>
