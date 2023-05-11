@@ -1,19 +1,19 @@
 .container{
   width: 100%;
   margin-top: 5%;
-  position: sticky;
+  position: fixed;
   top: 30px;
   background-color: white;
   opacity: 0.75;
   border-radius: 20px;
   transition: all 2s ease-in-out;
+  z-index: 9999;
 }
 
 .page-header{
   display: flex;
   justify-content: center;
   align-items: center;
-
 
 
 
