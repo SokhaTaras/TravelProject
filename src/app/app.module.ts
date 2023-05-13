@@ -13,6 +13,7 @@ import { ToursPageComponent } from './components/tours-page/tours-page.component
 import { TourCardComponent } from './components/tour-card/tour-card.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
+import { BaseComponent } from './components/base/base.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatCardModule} from "@angular/material/card";
     HeaderComponent,
     TitleComponent,
     ToursPageComponent,
-    TourCardComponent
+    TourCardComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
