@@ -1,6 +1,74 @@
-<div class="container">
-  <div class="filters">
+<div class="filters__div">
+  <div class="filters__country filters__cs">
+    <p class="name__of__filter">country</p>
+    <select class="filters__option" name="country" id="country-select">
+      <option value="0">--none--</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
   </div>
+  <div class="filters__sity filters__cs">
+    <p class="name__of__filter">sity</p>
+    <select class="filters__option" name="sity" id="sity-select">
+      <option value="0">--none--</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+  </div>
+  <div class="filters__prise">
+    <p class="name__of__filter">prise</p>
+    <div class="filters__prise__lable">
+      <label class="label__input__number">
+        <span class="filters__prise__name">від</span>
+        <input
+          class="input__number"
+          type="number"
+          id="volume"
+          name="volume"
+          placeholder="1000"
+          min="1000"
+          max="25000"
+        />
+        <span class="filters__prise__name">₴</span>
+      </label>
+      <label class="label__input__number">
+        <span class="filters__prise__name">до</span>
+        <input
+          class="input__number"
+          type="number"
+          id="volume"
+          name="volume"
+          placeholder="25000"
+          min="1000"
+          max="25000"
+        />
+        <span class="filters__prise__name">₴</span>
+      </label>
+    </div>
+  </div>
+  <div class="filters__duration filters">
+    <p class="name__of__filter">duration</p>
+    <input
+      class="input__number"
+      type="number"
+      id="number-input"
+      name="number-input"
+      placeholder="від 1 до 7"
+      min="0"
+      max="7"
+      step="1"
+    />
+  </div>
+</div>
+<div class="container">
   <div class="tour-list">
     <mat-card class="tour-list-item">
       <app-tour-card>My card1</app-tour-card>

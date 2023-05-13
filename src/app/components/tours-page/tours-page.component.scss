@@ -1,10 +1,77 @@
-.container{
+.filters__div {
+  margin: 20px 0px 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15%;
+  min-height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.filters__cs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 120px;
+}
+
+.filters__option {
+  border-radius: 20px;
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  width: 100%;
+  padding-left: 11px;
+}
+
+
+.filters__prise__lable {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15%
+}
+
+.label__input__number {
+  display: flex;
+  flex-direction: row;
+}
+
+.input__number {
+  border: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.filters__duration {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name__of__filter {
+  display: flex;
+  margin: 0%;
+  align-items: center;
+  justify-content: center;
+  font: small-caps bold 18px/1 sans-serif;
+}
+
+.container {
   border: 1px solid red;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.tour-list{
+.tour-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -17,9 +84,19 @@
   width: calc(25% - 20px);
 }
 
-app-tour-card{
+app-tour-card {
   flex-grow: 1;
   text-align: center;
   height: 300px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
