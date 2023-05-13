@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {OnInit} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { ActivatedRoute } from '@angular/router';
 import {User} from "../../Classes/user";
 
 @Component({
@@ -23,10 +24,15 @@ export class LoginComponent implements OnInit{
   })
   newUser: User = new User("","");
   isLogging: boolean = true
+  route: any
 
 
-  ngOnInit() {}
-  constructor() {}
+  ngOnInit() {
+    this.switchIsLogging()
+  }
+
+  constructor(private activateRoute: ActivatedRoute){
+  }
 
   loggingToggler(){
     this.isLogging = !this.isLogging;
@@ -40,6 +46,14 @@ export class LoginComponent implements OnInit{
 
   register(){
 
+  }
+
+  switchIsLogging(){
+    this.route = this.activateRoute.url.subscribe(value => {
+      if (value[0].path === 'registration'){
+        this.isLogging = false
+      }
+    })
   }
 
 }

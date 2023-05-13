@@ -23,6 +23,12 @@ const routes: Routes = [
   {
     path: 'login', component: LoginComponent
   },
+  {
+    path: 'registration', component: LoginComponent
+  },
+  {
+    path: '**', component: NotFoundComponent
+  },
 
 ];
 

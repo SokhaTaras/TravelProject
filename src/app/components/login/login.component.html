@@ -123,12 +123,12 @@
     </a>
   </div>
   <div class="input__button__div" *ngIf="!isLogging">
-    <a [routerLink]="['main']">
+    <a [routerLink]="['/main']">
       <button class="input__button" (click)="register()">Sign Up</button>
     </a>
   </div>
   <div class="input__button__div" *ngIf="isLogging">
-    <a [routerLink]="['main']" id="hrefNext">
+    <a [routerLink]="['/main']" id="hrefNext">
       <button class="input__button" id="loginButton" (click)="login()">
         Login
       </button>
