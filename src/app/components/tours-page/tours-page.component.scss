@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .filters__div {
   margin: 20px 0px 20px 0;
   display: flex;
@@ -68,7 +69,14 @@
 .container {
   border: 1px solid red;
   max-width: 1000px;
+=======
+.container{
+  max-width: 1200px;
+>>>>>>> master
   margin: 0 auto;
+  padding-bottom: 20px;
+  background: #ffffff;
+border-radius: 10px;
 }
 
 .tour-list {
@@ -79,15 +87,19 @@
 
 .tour-list-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 20px 0 0 0;
-  width: calc(25% - 20px);
+  margin: 40px 0 0 0;
+  width: calc(25% - 40px);
 }
 
 app-tour-card {
   flex-grow: 1;
   text-align: center;
-  height: 300px;
+  //flex: 1;
+  overflow: auto;
+  height: 400px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
 }
 
 input::-webkit-outer-spin-button,
