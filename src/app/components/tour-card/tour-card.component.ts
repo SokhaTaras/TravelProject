@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {toNumbers} from "@angular/compiler-cli/src/version_helpers";
 
 @Component({
   selector: 'app-tour-card',
@@ -46,6 +45,6 @@ export class TourCardComponent implements OnInit{
   }
 
   redirect(){
-    window.location.href = this.tour.reference;
+    window.open(this.tour.reference, "_blank");
   }
 }
