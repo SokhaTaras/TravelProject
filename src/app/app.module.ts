@@ -14,6 +14,8 @@ import { TourCardComponent } from './components/tour-card/tour-card.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import { BaseComponent } from './components/base/base.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { BaseComponent } from './components/base/base.component';
     AppRoutingModule,
     ReactiveFormsModule,
     NoopAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

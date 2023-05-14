@@ -70,38 +70,8 @@
 </div>
 <div class="container">
   <div class="tour-list">
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card1</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card2</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card3</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card4</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card5</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card6</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card7</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card8</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card9</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card10</app-tour-card>
-    </mat-card>
-    <mat-card class="tour-list-item">
-      <app-tour-card>My card11</app-tour-card>
+    <mat-card class="tour-list-item" *ngFor="let tourItem of tours">
+      <app-tour-card [tour]="tourItem"></app-tour-card>
     </mat-card>
   </div>
 </div>

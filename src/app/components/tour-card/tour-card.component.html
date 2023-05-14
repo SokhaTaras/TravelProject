@@ -2,19 +2,19 @@
   <div class="card-image">
   <img src="https://otour.com.ua/images/countries/images/imgonline-com-ua-resize-zb9v4mwwpc.jpg" alt="" width="100%" height="200px">
 </div>
-  <div class="card-title">
-    TITLE
+  <div class="card-title" [matTooltip]="countries">
+    {{getTitle()}}
   </div>
-  <div class="card-location">
-    COUNTRY
+  <div class="card-location" [matTooltip]="cities">
+    {{getCities() }}
   </div>
   <div class="card-duration">
-    DURATION
+    {{'Duration: ' + tour.duration +' day(s)'}}
   </div>
-  <div class="card-cost">
-    COST
+  <div class="card-cost" [matTooltip]="price">
+    {{'Price: ' + tour.price + ' ₴\n'}}
   </div>
   <div>
-    <button class="card-button">ORDER</button>
+    <button class="card-button" (click)="redirect()">ORDER</button>
   </div>
 </div>
