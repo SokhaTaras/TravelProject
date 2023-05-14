@@ -15,6 +15,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import { BaseComponent } from './components/base/base.component';
 import {HttpClientModule} from "@angular/common/http";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     NoopAnimationsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

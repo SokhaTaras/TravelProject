@@ -2,11 +2,11 @@
   <div class="card-image">
   <img src="https://otour.com.ua/images/countries/images/imgonline-com-ua-resize-zb9v4mwwpc.jpg" alt="" width="100%" height="200px">
 </div>
-  <div class="card-title">
+  <div class="card-title" [matTooltip]="countries">
     {{getTitle()}}
   </div>
-  <div class="card-location">
-    {{getCities()}}
+  <div class="card-location" [matTooltip]="cities">
+    {{getCities() }}
   </div>
   <div class="card-duration">
     {{'Duration: ' + tour.duration +' day(s)'}}
