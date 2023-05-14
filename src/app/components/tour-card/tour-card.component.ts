@@ -46,6 +46,6 @@ export class TourCardComponent implements OnInit{
   }
 
   redirect(){
-    window.location.href = this.tour.reference;
+    window.open(this.tour.reference, "_blank");
   }
 }

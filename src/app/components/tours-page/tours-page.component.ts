@@ -18,7 +18,6 @@ export class ToursPageComponent implements OnInit{
 
     getAllTrips(){
       this.tripService.getAllTrips().subscribe((res)=>{
-        console.log(res)
         this.tours = res
       });
     }
