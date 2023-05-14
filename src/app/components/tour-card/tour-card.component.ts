@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {toNumbers} from "@angular/compiler-cli/src/version_helpers";
 
 @Component({
   selector: 'app-tour-card',
@@ -9,10 +10,19 @@ export class TourCardComponent implements OnInit{
   @Input() tour:any;
   countries:any
   cities:any
+  price:any
 
   ngOnInit() {
     this.getTitle();
     this.getCities();
+    this.getPrice();
+  }
+
+  getPrice(){
+    let euro = (this.tour.price/40.5).toFixed(0)
+    let dollar = (this.tour.price/37.5).toFixed(0)
+    let hryvna = this.tour.price.toFixed(0)
+    this.price = [dollar +' $', euro + ' €' , hryvna +' ₴']
   }
 
   getTitle() {

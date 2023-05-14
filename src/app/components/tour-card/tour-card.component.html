@@ -11,7 +11,7 @@
   <div class="card-duration">
     {{'Duration: ' + tour.duration +' day(s)'}}
   </div>
-  <div class="card-cost">
+  <div class="card-cost" [matTooltip]="price">
     {{'Price: ' + tour.price + ' ₴\n'}}
   </div>
   <div>
