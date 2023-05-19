@@ -5,8 +5,8 @@
   background-color: white;
   opacity: 1;
   border-radius: 10px;
+  scroll-behavior: smooth;
 }
-
 .nav{
   display: flex;
   justify-content:space-around;
@@ -27,7 +27,7 @@
     text-decoration: none;
     font: small-caps bold 22px/1 sans-serif;
   }}
- 
+
   .container-img{
     display: flex;
     align-items: center;
@@ -48,4 +48,7 @@
 
   }
 
+}
+html, body {
+  scroll-behavior: smooth;
 }
