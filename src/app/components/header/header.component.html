@@ -1,32 +1,31 @@
 <div class="container">
   <div class="page-header">
     <div class="nav container-img">
-      <a href="https://web.telegram.org/z/" target="_blank">
+      <a  class="nav__section" href="https://web.telegram.org/z/" target="_blank">
         <img class="telegram-img" src="assets/photos/Telegram_logo.png" />
       </a>
-      <a href="https://www.instagram.com/travelissimo/?hl=en" target="_blank">
+      <a  class="nav__section" href="https://www.instagram.com/travelissimo/?hl=en" target="_blank">
         <img class="instagram-img" src="assets/photos/Instagram_icon.png" />
       </a>
-      <a href="https://mail.google.com/" target="_blank">
+      <a class="nav__section" href="https://mail.google.com/" target="_blank">
         <img class="gmail-img" src="assets/photos/Gmail_icon_(2020).png" />
       </a>
     </div>
     <div class="nav">
       <div class="nav__header">
-        <a class="nav__section" href="#">Main</a>
+        <a class="nav__section smooth-scroll" href="#title-container">Main</a>
       </div>
       <div class="nav__header">
-        <a class="nav__section" href="#">Trip</a>
+        <a class="nav__section smooth-scroll" href="#tourlistitem">Trip</a>
       </div>
     </div>
     <div class="nav">
       <div class="nav__header">
-        <a class="nav__section" [routerLink]="['login']">Login</a>
+        <a class="nav__section" [routerLink]="['login']">Log in</a>
       </div>
       <div class="nav__header">
         <a class="nav__section" [routerLink]="['registration']">Registration</a>
       </div>
-      <div></div>
     </div>
   </div>
 </div>

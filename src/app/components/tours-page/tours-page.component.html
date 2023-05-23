@@ -12,7 +12,7 @@
     </select>
   </div>
   <div class="filters__sity filters__cs">
-    <p class="name__of__filter">sity</p>
+    <p class="name__of__filter">city</p> 
     <select class="filters__option" name="sity" id="sity-select">
       <option value="0">--none--</option>
       <option value="1">1</option>
@@ -24,7 +24,7 @@
     </select>
   </div>
   <div class="filters__prise">
-    <p class="name__of__filter">prise</p>
+    <p class="name__of__filter">price</p>
     <div class="filters__prise__lable">
       <label class="label__input__number">
         <span class="filters__prise__name">від</span>
@@ -68,7 +68,7 @@
     />
   </div>
 </div>
-<div class="container">
+<div class="container" id="tourlistitem">
   <div class="tour-list">
     <mat-card class="tour-list-item" *ngFor="let tourItem of tours">
       <app-tour-card [tour]="tourItem"></app-tour-card>

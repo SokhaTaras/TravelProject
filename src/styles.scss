@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 /* In body background-size: 4000% 4000%;  and    height: 100vh; can broke out gradient*/
 
+html {
+   scroll-behavior: smooth;
+}
 body {
   //background: linear-gradient(-45deg, #4af1cd, #24a7cb, #23a6d5, #23d5ab);
   background: linear-gradient(-45deg, #8776b8, #8E8E8E, #6ca0d0, #23d5ab);
