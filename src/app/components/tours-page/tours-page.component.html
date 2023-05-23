@@ -1,26 +1,14 @@
 <div class="filters__div">
   <div class="filters__country filters__cs">
     <p class="name__of__filter">country</p>
-    <select class="filters__option" name="country" id="country-select">
-      <option value="0">--none--</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
+    <select class="filters__option" name="country" id="country-select" [(ngModel)]="selectedCountry" (ngModelChange)="getTripsByCountry()">
+      <option [value]="country" *ngFor="let country of countries">{{ country }}</option>
     </select>
   </div>
   <div class="filters__sity filters__cs">
     <p class="name__of__filter">city</p>
-    <select class="filters__option" name="sity" id="sity-select">
-      <option value="0">--none--</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
+    <select class="filters__option" name="sity" id="sity-select" [(ngModel)]="selectedCity" (ngModelChange)="getTripsByCity()">
+      <option [value]="city" *ngFor="let city of cities">{{ city }}</option>
     </select>
   </div>
   <div class="filters__prise">
@@ -31,11 +19,13 @@
         <input
           class="input__number"
           type="number"
-          id="volume"
-          name="volume"
+          id="minPrice"
+          name="minPrice"
           placeholder="1000"
           min="1000"
           max="25000"
+          [(ngModel)]="minPrice"
+          (ngModelChange)="getTripsByPriceBetween()"
         />
         <span class="filters__prise__name">₴</span>
       </label>
@@ -44,15 +34,18 @@
         <input
           class="input__number"
           type="number"
-          id="volume"
-          name="volume"
+          id="maxPrice"
+          name="maxPrice"
           placeholder="25000"
           min="1000"
           max="25000"
+          [(ngModel)]="maxPrice"
+          (ngModelChange)="getTripsByPriceBetween()"
         />
         <span class="filters__prise__name">₴</span>
       </label>
     </div>
+
   </div>
   <div class="filters__duration filters">
     <p class="name__of__filter">duration</p>
@@ -66,7 +59,7 @@
       max="7"
       step="1"
       [(ngModel)]="duration"
-      (ngModelChange)="getAllTripsByDuration(duration)"
+      (ngModelChange)="getTripsByDuration(duration)"
     />
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import { mainLink } from 'src/app/Link/main-link';
+import { mainLink } from 'src/app/Enums/main-link';
 
 @Injectable({
   providedIn: 'root'
@@ -13,24 +13,20 @@ export class TripService {
     return this.http.get(`${mainLink}/main`)
   }
 
-  getTripsByCountry(){
-
+  getTripsByCountry(country: string){
+    return this.http.get(`${mainLink}/main?country=${country}`);
   }
-  getTripsByCity(){
 
+  getTripsByCity(city: string){
+    return this.http.get(`${mainLink}/main?city=${city}`);
   }
-  getTripsByPriceLessThan(){
 
-  }
-  getTripsByPriceGreaterThan(){
-
-  }
   getTripsByPriceBetween(minPrice: number, maxPrice: number){
-    return this.http.get(`${mainLink}/main/getTripsByPriceBetween/${minPrice}`)
+    return this.http.get(`${mainLink}/main?minPrice=${minPrice}&maxPrice=${maxPrice}`);
   }
+
   getTripsByDuration(duration: number){
     return this.http.get(`${mainLink}/main?duration=${duration}`)
   }
-
 
 }

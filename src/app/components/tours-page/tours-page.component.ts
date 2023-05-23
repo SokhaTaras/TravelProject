@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TripService} from "../../services/trip-service/trip.service";
+import {Cities, Countries} from "../../Enums/enums";
 
 
 @Component({
@@ -10,7 +11,13 @@ import {TripService} from "../../services/trip-service/trip.service";
 
 export class ToursPageComponent implements OnInit{
     tours: any
-    duration: number = 1;
+    duration: number = 0;
+    minPrice: number = 0;
+    maxPrice: number = 0;
+    countries = Countries
+    cities = Cities;
+    selectedCountry: string = '';
+    selectedCity: string = '';
 
     constructor(private tripService: TripService) {}
     ngOnInit(): void {
@@ -23,7 +30,7 @@ export class ToursPageComponent implements OnInit{
       });
     }
 
-  getAllTripsByDuration(duration: number): void {
+  getTripsByDuration(duration: number): void {
     if (duration !== null) {
       this.tripService.getTripsByDuration(duration).subscribe(res => {
         this.tours = res;
@@ -31,6 +38,24 @@ export class ToursPageComponent implements OnInit{
     } else {
       this.getAllTrips();
     }
+  }
+
+  getTripsByPriceBetween(): void {
+    this.tripService.getTripsByPriceBetween(this.minPrice, this.maxPrice).subscribe((res) => {
+      this.tours = res;
+    });
+  }
+
+  getTripsByCountry(): void{
+    this.tripService.getTripsByCountry(this.selectedCountry).subscribe((res) => {
+      this.tours = res;
+    });
+  }
+
+  getTripsByCity(): void{
+    this.tripService.getTripsByCity(this.selectedCity).subscribe((res) => {
+      this.tours = res;
+    });
   }
 
 }

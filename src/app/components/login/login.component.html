@@ -111,7 +111,7 @@
   </form>
 
   <div class="input__button__div" *ngIf="!isLogging">
-    <a>
+    <a [routerLink]="['/login']">
       <button
         class="input__button"
         (click)="loggingToggler()"
@@ -135,7 +135,7 @@
     </a>
   </div>
   <div class="input__button__div" *ngIf="isLogging">
-    <a>
+    <a [routerLink]="['/registration']">
       <button class="input__button" (click)="loggingToggler()">
         Create new account
       </button>
