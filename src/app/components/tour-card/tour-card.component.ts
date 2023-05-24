@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {toNumbers} from "@angular/compiler-cli/src/version_helpers";
 
 @Component({
   selector: 'app-tour-card',
@@ -13,9 +12,6 @@ export class TourCardComponent implements OnInit{
   price:any
 
   ngOnInit() {
-    this.getTitle();
-    this.getCities();
-    this.getPrice();
   }
 
   getPrice(){
@@ -30,10 +26,12 @@ export class TourCardComponent implements OnInit{
     let firstCountry = this.countries[0];
     let lastCountry = this.countries[this.countries.length - 1];
     let upgradedCountry = this.countries[this.countries.length - 2];
-
-    if (firstCountry === lastCountry) {
+    if (this.countries.length === 0) {
       return `${firstCountry}-${upgradedCountry}`;
-    } else {
+    } else if(firstCountry === lastCountry){
+      return `${firstCountry}`;
+    }
+    else {
       return `${firstCountry}-${lastCountry}`;
     }
   }
@@ -42,7 +40,11 @@ export class TourCardComponent implements OnInit{
     this.cities = this.tour.cities.split(',');
     let firstCountry = this.cities[0];
     let lastCountry = this.cities[this.cities.length - 1];
+    if (this.cities.length === 1){
+      return `${firstCountry}`
+    } else {
     return `${firstCountry}-${lastCountry}`;
+    }
   }
 
   redirect(){
