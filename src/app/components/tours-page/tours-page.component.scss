@@ -128,3 +128,7 @@ input[type=number] {
 input{
   padding: 0 3px;
 }
+.input__number:focus,
+.filters__option:focus {
+  outline: none;
+}
