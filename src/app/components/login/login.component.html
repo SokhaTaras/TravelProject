@@ -56,7 +56,7 @@
         type="text"
         placeholder="Enter name"
         name="userName"
-        formControlName="userName"
+        formControlName="firstName"
       />
     </div>
     <p class="name__registration__form">Enter surname</p>
@@ -66,7 +66,7 @@
         type="text"
         placeholder="Enter surname"
         name="userSurname"
-        formControlName="userSurname"
+        formControlName="lastName"
       />
     </div>
     <p class="name__registration__form">Enter email</p>
@@ -111,6 +111,11 @@
   </form>
 
   <div class="input__button__div" *ngIf="!isLogging">
+    <a [routerLink]="['/main']">
+      <button class="input__button" (click)="register()">Sign Up</button>
+    </a>
+  </div>
+  <div class="input__button__div" *ngIf="!isLogging">
     <a [routerLink]="['/login']">
       <button
         class="input__button"
@@ -120,11 +125,6 @@
       >
         Login
       </button>
-    </a>
-  </div>
-  <div class="input__button__div" *ngIf="!isLogging">
-    <a [routerLink]="['/main']">
-      <button class="input__button" (click)="register()">Sign Up</button>
     </a>
   </div>
   <div class="input__button__div" *ngIf="isLogging">
