@@ -1,5 +1,6 @@
 .filters__div {
-  margin: 20px 0px 20px 0;
+  margin: 20px 0 20px 0;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -106,4 +107,24 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+.filters__reset {
+  display: flex;
+  align-items: center;
+}
+
+.reset__button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  outline: none;
+  font: small-caps bold 14px/1 sans-serif;
+  text-transform: uppercase;
+}
+input{
+  padding: 0 3px;
 }
