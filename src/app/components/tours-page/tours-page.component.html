@@ -12,7 +12,7 @@
     </select>
   </div>
   <div class="filters__sity filters__cs">
-    <p class="name__of__filter">city</p> 
+    <p class="name__of__filter">city</p>
     <select class="filters__option" name="sity" id="sity-select">
       <option value="0">--none--</option>
       <option value="1">1</option>
@@ -27,7 +27,7 @@
     <p class="name__of__filter">price</p>
     <div class="filters__prise__lable">
       <label class="label__input__number">
-        <span class="filters__prise__name">від</span>
+        <span class="filters__prise__name">from</span>
         <input
           class="input__number"
           type="number"
@@ -40,7 +40,7 @@
         <span class="filters__prise__name">₴</span>
       </label>
       <label class="label__input__number">
-        <span class="filters__prise__name">до</span>
+        <span class="filters__prise__name">to</span>
         <input
           class="input__number"
           type="number"
@@ -61,11 +61,14 @@
       type="number"
       id="number-input"
       name="number-input"
-      placeholder="від 1 до 7"
+      placeholder="from 1 to 7"
       min="0"
       max="7"
       step="1"
     />
+  </div>
+  <div class="filters__reset">
+    <button class="reset__button" type="button">Reset</button>
   </div>
 </div>
 <div class="container" id="tourlistitem">

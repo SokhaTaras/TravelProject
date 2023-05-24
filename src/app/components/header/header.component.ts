@@ -1,9 +1,9 @@
  import { Component, AfterViewInit, OnInit, ElementRef, HostListener } from '@angular/core';
  import { Router } from '@angular/router';
- //import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+
 
 @Component({
-  selector: 'app-header', 
+  selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -36,13 +36,6 @@ export class HeaderComponent implements AfterViewInit {
     });
   }
 }
-//   export class HeaderComponent {
-  
-// // це відповідає за появу хедера під час скролу
-// //   @HostListener('window:scroll', ['$event'])
-// //   onWindowScroll() {
-// //     this.isHeaderTransparent = window.scrollY < 40;
-// //   }
-// }
+
 
 
